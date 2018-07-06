@@ -23,6 +23,7 @@ export class Hello extends Component {
     render() {
       return (
         <div>
+            <h1>Yuanhao's Greeting</h1>
             <p>hello world! {this.props.message}!</p>
             <p>{this.state.message}</p>
             <button onClick={this.updateMessage}>Click to change</button>

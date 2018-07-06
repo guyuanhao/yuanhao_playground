@@ -1,24 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { Link } from "react-router-dom";
 
 export const Header= (props) =>{
     return(
-        <div>
-            <ul className="nav nav-tabs" id="myTab" role="tablist">
-                <li className="nav-item">
-                    <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Profile</a>
-                </li>
-                <li className="nav-item">
-                    <a className="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Contact</a>
-                </li>
-            </ul>
-            <div className="tab-content" id="myTabContent">
-                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">a</div>
-                <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">b</div>
-                <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">c</div>
+        <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a className="navbar-brand" href="#">Yuanhao's playground</a>
+            <div className="collapse navbar-collapse">
+                <ul className="navbar-nav mr-auto">
+                    <li className="nav-item">
+                        <Link to="/"  className="nav-link">Home</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link to="/Hello"  className="nav-link">Hello</Link>
+                    </li>
+                </ul> 
             </div>
-        </div>
+        </nav>
     )
 }
