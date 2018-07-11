@@ -7,6 +7,13 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 class App extends Component {
   render() {
+
+    const MyHelloPage = (props) => {
+      return (
+        <Hello message="My Friend"/>
+      )
+    }
+
     return (
       <Router>
         <div>
@@ -14,7 +21,7 @@ class App extends Component {
           <main role="main" className="container App-content">
             <div>
               <Route path="/" exact component={Home} />
-              <Route path="/hello" component={Hello} />
+              <Route path="/hello" render={MyHelloPage}/>
             </div>
           </main>
           <footer className="footer">
